@@ -10,11 +10,31 @@ import os
 import time
 import json
 import random
+import itertools
 
 # ==========================================
 # Configuration & Setup
 # ==========================================
 SEED = 42
+ENABLE_FEATURE_FUSION = True
+
+def add_feature_fusion(df, numeric_cols, max_base_features=20):
+    if not numeric_cols:
+        return df, numeric_cols
+    base_cols = numeric_cols[:max_base_features]
+    new_numeric_cols = list(numeric_cols)
+    for col in base_cols:
+        col_numeric = pd.to_numeric(df[col], errors="coerce")
+        new_col = f"{col}__sq"
+        df[new_col] = col_numeric ** 2
+        new_numeric_cols.append(new_col)
+    for c1, c2 in itertools.combinations(base_cols, 2):
+        c1_numeric = pd.to_numeric(df[c1], errors="coerce")
+        c2_numeric = pd.to_numeric(df[c2], errors="coerce")
+        new_col = f"{c1}__x__{c2}"
+        df[new_col] = c1_numeric * c2_numeric
+        new_numeric_cols.append(new_col)
+    return df, new_numeric_cols
 def set_seed(seed):
     random.seed(seed)
     np.random.seed(seed)
@@ -103,6 +123,10 @@ def load_and_preprocess_data():
                 numeric_cols.append(col)
             else:
                 categorical_cols.append(col)
+
+    if ENABLE_FEATURE_FUSION:
+        df, numeric_cols = add_feature_fusion(df, numeric_cols)
+        feature_cols = [c for c in df.columns if c not in drop_cols and c != target_col]
 
     print(f"Numeric features ({len(numeric_cols)}): {numeric_cols}")
     print(f"Categorical features ({len(categorical_cols)}): {categorical_cols}")
