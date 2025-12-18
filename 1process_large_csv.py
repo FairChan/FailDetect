@@ -11,9 +11,15 @@ output_csv = r'c:\Users\ssema\Desktop\FailDetect\dataProcessing\Processed_Origin
 # 1. Load Codebook and Parse Metadata
 print("Loading codebook...")
 codebook = pd.read_csv(codebook_path, encoding='latin-1')
+# Clean columns (BOM, whitespace)
+codebook.columns = codebook.columns.str.strip().str.replace('^ï»¿', '', regex=True)
 
 # Extract target variables from the codebook
-target_vars = codebook['Variable'].tolist()
+if 'Variable' in codebook.columns:
+    target_vars = codebook['Variable'].tolist()
+else:
+    print("Warning: 'Variable' column not found by name. Using first column.")
+    target_vars = codebook.iloc[:, 0].tolist()
 print(f"Found {len(target_vars)} target variables in codebook.")
 
 # Parse missing values
