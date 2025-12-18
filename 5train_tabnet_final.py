@@ -44,9 +44,9 @@ def set_seed(seed):
 
 set_seed(SEED)
 
-DATA_PATH = r'c:\Users\ssema\Desktop\FailDetect\dataProcessing\Final.csv'
-CODEBOOK_PATH = r'c:\Users\ssema\Desktop\FailDetect\codebook\FinalCodeBook.csv'
-OUTPUT_DIR = r'c:\Users\ssema\Desktop\FailDetect\models_tabnet'
+DATA_PATH = r'dataProcessing/Final.csv'
+CODEBOOK_PATH = r'codebook/FinalCodeBook.csv'
+OUTPUT_DIR = r'models_tabnet'
 
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)

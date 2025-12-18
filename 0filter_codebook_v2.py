@@ -1,8 +1,8 @@
 import pandas as pd
 import os
 
-codebook_path = r'c:\Users\ssema\Desktop\FailDetect\codebook\FinalCodeBook.csv'
-backup_path = r'c:\Users\ssema\Desktop\FailDetect\codebook\FinalCodeBook_backup.csv'
+codebook_path = r'codebook/FinalCodeBook.csv'
+backup_path = r'codebook/FinalCodeBook_backup.csv'
 
 # List of variables to keep
 keep_vars = [

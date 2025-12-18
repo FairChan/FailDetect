@@ -4,9 +4,9 @@ import os
 import re
 
 # Paths
-input_csv = r'c:\Users\ssema\Desktop\FailDetect\dataProcessing\Original.csv'
-codebook_path = r'c:\Users\ssema\Desktop\FailDetect\codebook\FinalCodeBook.csv'
-output_csv = r'c:\Users\ssema\Desktop\FailDetect\dataProcessing\Processed_Original.csv'
+input_csv = r'dataProcessing/Original.csv'
+codebook_path = r'codebook/FinalCodeBook.csv'
+output_csv = r'dataProcessing/Processed_Original.csv'
 
 # 1. Load Codebook and Parse Metadata
 print("Loading codebook...")

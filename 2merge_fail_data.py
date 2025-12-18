@@ -2,9 +2,9 @@ import pandas as pd
 import numpy as np
 
 # Paths
-processed_csv_path = r'c:\Users\ssema\Desktop\FailDetect\dataProcessing\Processed_Original.csv'
-result_csv_path = r'c:\Users\ssema\Desktop\FailDetect\dataProcessing\OriginalResult.csv'
-output_csv_path = r'c:\Users\ssema\Desktop\FailDetect\dataProcessing\Final.csv'
+processed_csv_path = r'dataProcessing/Processed_Original.csv'
+result_csv_path = r'dataProcessing/OriginalResult.csv'
+output_csv_path = r'dataProcessing/Final.csv'
 
 print("Loading datasets...")
 # Load processed data

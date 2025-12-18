@@ -13,9 +13,9 @@ RANDOM_SEED = 42
 np.random.seed(RANDOM_SEED)
 
 # Paths
-DATA_PATH = r'c:\Users\ssema\Desktop\FailDetect\dataProcessing\Final.csv'
-CODEBOOK_PATH = r'c:\Users\ssema\Desktop\FailDetect\codebook\FinalCodeBook.csv'
-MODEL_DIR = r'c:\Users\ssema\Desktop\FailDetect\models'
+DATA_PATH = r'dataProcessing/Final.csv'
+CODEBOOK_PATH = r'codebook/FinalCodeBook.csv'
+MODEL_DIR = r'models'
 
 if not os.path.exists(MODEL_DIR):
     os.makedirs(MODEL_DIR)
