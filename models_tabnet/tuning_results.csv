@@ -1,6 +1,7 @@
 params,val_auc
-"{'n_d': 24, 'n_steps': 5, 'gamma': 1.0, 'lambda_sparse': 0, 'learning_rate': 0.01, 'n_a': 24}",0.7237407112498011
-"{'n_d': 8, 'n_steps': 3, 'gamma': 1.5, 'lambda_sparse': 0.0001, 'learning_rate': 0.02, 'n_a': 8}",0.7578481541279511
-"{'n_d': 8, 'n_steps': 3, 'gamma': 1.0, 'lambda_sparse': 0, 'learning_rate': 0.02, 'n_a': 8}",0.7944278382486358
-"{'n_d': 24, 'n_steps': 5, 'gamma': 1.5, 'lambda_sparse': 0.0001, 'learning_rate': 0.02, 'n_a': 24}",0.635869799482313
-"{'n_d': 16, 'n_steps': 3, 'gamma': 1.0, 'lambda_sparse': 0, 'learning_rate': 0.02, 'n_a': 16}",0.812227216024646
+"{'n_d': 24, 'n_steps': 5, 'gamma': 1.0, 'lambda_sparse': 0, 'learning_rate': 0.01, 'n_a': 24}",0.7765922487240565
+"{'n_d': 8, 'n_steps': 3, 'gamma': 1.5, 'lambda_sparse': 0.0001, 'learning_rate': 0.02, 'n_a': 8}",0.7873181216220283
+"{'n_d': 8, 'n_steps': 3, 'gamma': 1.0, 'lambda_sparse': 0, 'learning_rate': 0.02, 'n_a': 8}",0.7782849161876055
+"{'n_d': 24, 'n_steps': 5, 'gamma': 1.5, 'lambda_sparse': 0.0001, 'learning_rate': 0.02, 'n_a': 24}",0.6208640606927718
+"{'n_d': 16, 'n_steps': 3, 'gamma': 1.0, 'lambda_sparse': 0, 'learning_rate': 0.02, 'n_a': 16}",0.814481830704768
+出勤与学习投入
